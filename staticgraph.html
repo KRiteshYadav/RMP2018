@@ -1,0 +1,71 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Payments Details(2018)</title>
+    
+    </head>
+
+
+
+
+
+
+<body>
+<canvas id="RMP" width="400" height="400"></canvas>
+<script>
+var rm = document.getElementById("RMP").getContext('2d');
+var RMP = new Chart(rm, {
+    type: 'bar',
+    data: {
+        labels: ["January","February","March","April","May","June","July","August","September","October","Novemeber","December"],
+        datasets: [{
+            label: 'Monthly Payments details of the year 2018',
+            data: [26000,5000,10000,12000,10000,17000,15000,12000,0,0,0,0],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.3)',
+                'rgba(54, 162, 235, 0.3)',
+                'rgba(255, 206, 86, 0.3)',
+                'rgba(75, 192, 192, 0.3)',
+                'rgba(153, 102, 255, 0.3)',
+                'rgba(255, 159, 64, 0.3)',
+                'rgba(222, 159, 178,0.3)',
+                'rgba(178, 255,37,0.3)',
+                'rgba(189,25,219,0.3)',
+                'rgba(120,200,129,0.3)',
+                'rgba(26,10,25,0.3)',
+                'rgba(154,25,10,0.3)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,2)',
+                'rgba(54, 162, 235, 2)',
+                'rgba(255, 206, 86, 2)',
+                'rgba(75, 192, 192, 2)',
+                'rgba(153, 102, 255, 2)',
+                'rgba(255, 159, 64, 2)',
+                'rgba(222,159,178,2)',
+                'rgba(178,255,37,2)',
+                'rgba(189,25,219,2)',
+                'rgba(120,200,129,2)',
+                'rgba(26,10,25,2)',
+                'rgba(154,25,10,2)'
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+    </body>
+    
+    
+</html>
+    
